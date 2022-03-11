@@ -1,0 +1,80 @@
+ion-img {
+    width: 100pt;
+}
+
+.img-oink {
+    display: flex;
+    margin: 60px 15px 0 15px;
+}
+
+.img-oink h3 {
+    color: #757575;
+    font-size: 14pt;
+    margin-left: 20px;
+    text-align: start;
+}
+
+.line {
+    border: solid 0.5px #1EEA00;
+    width: 350px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.img-oink p {
+    color: #004B40;
+    font-family: 'Montserrat';
+    display: flex;
+    position: absolute;
+    right: 50px;
+    top: 35px;
+}
+
+.textDT {
+    color: #004B40;
+    font-family: 'Montserrat';
+    font-size:  14pt;
+}
+
+ion-list {
+    background-color: transparent;
+}
+
+ion-item {
+    --background: transparent;
+    color: #AAAAAA;
+    --border-color: #AAAAAA;
+}
+
+ion-select, ion-input {
+    color: #212121;
+}
+
+.img-check {
+    width: 20px;
+    display: flex;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+
+ion-icon {
+    color: black;
+    display: flex;
+    position: absolute;
+    right: 20px;
+    bottom: 8px;
+    z-index: 9999;
+}
+
+.msg-confirmPIN {
+    color: #FF0000;
+    font-size: 9pt;
+    margin-left: 10px;
+}
+
+ion-button {
+
+    font-family: 'Montserrat';
+    height: 50px;
+}

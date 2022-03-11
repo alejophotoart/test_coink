@@ -1,0 +1,21 @@
+<ion-content>
+
+  <div>
+    <ion-img [src]="img" class="img-oink"></ion-img>  
+  </div>
+
+  <div class="text-oink">
+    <h1 class="text-title">{{ text }}</h1>
+  </div>
+
+  <div class="btn-content">
+      <ion-button [routerLink]="['/phone-number']" routerLinkActive="router-link-active"  color="registrate" class="btn-1" expand="block" shape="round">
+      REGÍSTRATE
+    </ion-button>
+
+    <ion-button color="ingresa" class="btn-2" (click)="onClick()" expand="block" shape="round">
+      INGRESA
+    </ion-button>
+  </div>
+
+</ion-content>

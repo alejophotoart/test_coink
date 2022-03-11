@@ -1,0 +1,71 @@
+ion-img {
+    width: 100pt;
+}
+
+.img-oink {
+    display: flex;
+    margin: 60px 15px 0 15px;
+}
+
+.img-oink h3 {
+    color: #757575;
+    font-size: 14pt;
+    margin-left: 20px;
+    text-align: start;
+    max-width: 260px;
+}
+
+.line {
+    border: solid 0.5px #1EEA00;
+    width: 350px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.img-oink p {
+    color: #004B40;
+    font-family: 'Montserrat';
+    display: flex;
+    position: absolute;
+    right: 77px;
+    top: 20px;
+    max-width: 197px;
+}
+
+.title {
+    color: #004B40;
+    font-family: 'Montserrat';
+    font-size: 15pt;
+}
+
+.terms {
+    color: #323232;
+    font-size: 13pt;
+    margin: 0;
+    padding: 0px 20px 0px 20px;
+}
+
+.read_terms {
+    padding: 15px;
+}
+
+ion-item {
+    --background: transparent;
+    --border-color: transparent;
+}
+
+a {
+    color: #004B40;
+}
+
+ion-checkbox {
+    --background-checked: #1eeb00;
+    --border-color-checked: #1eeb00
+}
+
+ion-button {
+
+    font-family: 'Montserrat';
+    height: 50px;
+    margin: 15px;
+}

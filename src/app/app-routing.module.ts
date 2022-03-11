@@ -4,12 +4,32 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
+  },
+  {
+    path: 'phone-number',
+    loadChildren: () => import('./pages/phone-number/phone-number.module').then( m => m.PhoneNumberPageModule)
+  },
+  {
+    path: 'code-number/:phone_number',
+    loadChildren: () => import('./pages/code-number/code-number.module').then( m => m.CodeNumberPageModule)
+  },
+  {
+    path: 'data-client',
+    loadChildren: () => import('./pages/data-client/data-client.module').then( m => m.DataClientPageModule)
+  },
+  {
+    path: 'terms-contidion',
+    loadChildren: () => import('./pages/terms-contidion/terms-contidion.module').then( m => m.TermsContidionPageModule)
   },
 ];
 

@@ -1,0 +1,47 @@
+.img-oink {
+    width: 150px !important;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 38%;
+    transform: translateY(-50%);
+}
+
+.text-oink {
+    color: #1EEA00;
+    font-family: 'Montserrat';
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 58%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.text-title {
+    margin: 0px 40px 20px 40px;
+    font-size: 1.3em;
+}
+
+.btn-content {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.btn-content .btn-1, .btn-2 {
+    height: 50px;
+    margin: 15px;
+    font-size: 13pt;
+}
+.btn-content .btn-1 {
+    font-family: 'Montserrat', 'Bold';
+}
+
+.btn-content .btn-2 {
+    font-family: 'Montserrat', 'SemiBold';
+
+}

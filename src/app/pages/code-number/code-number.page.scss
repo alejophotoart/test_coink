@@ -1,0 +1,37 @@
+ion-img {
+    width: 100pt;
+}
+
+.img-oink {
+    display: flex;
+    margin: 60px 15px 0 15px;
+}
+
+.img-oink h3 {
+    color: #757575;
+    font-size: 14pt;
+    margin-left: 20px;
+    text-align: start;
+}
+
+.line {
+    border: solid 0.5px #1EEA00;
+    width: 350px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.input_phone {
+    margin: 30px;
+}
+
+.input_phone ion-input {
+    display: flex;
+    text-align: center;
+    font-size: 3em;
+    color: black;
+}
+
+ion-button {
+    font-size: 20px;
+}

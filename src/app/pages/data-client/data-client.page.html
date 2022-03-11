@@ -1,0 +1,94 @@
+<app-header status="2" title="DATOS DE CUENTA" ></app-header>
+
+<ion-content class="ion-padding">
+
+  <div class="img-oink">
+
+    <ion-img [src]="image"></ion-img>
+    <p>¿CUÁLES SON TUS DATOS?</p>
+    <h3>Ahora necesitamos saber algunos datos tuyos</h3>
+
+  </div>
+
+  <div class="line"></div>
+
+  <form (ngSubmit)="onSubmit( formData )" #formData="ngForm">
+    
+    <ion-list>
+      <ion-list-header>
+        <ion-label class="textDT">Documento de identidad</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label position="floating">Tipo de documento</ion-label>
+        <ion-select name="document_type" id="document_type" [(ngModel)]="document_type" required>
+          <ion-select-option *ngFor="let d of documentTypes" [value]="d.value.id">{{ d.value.description }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">Número de documento</ion-label>
+        <ion-input name="number_documento" id="number_documento" [(ngModel)]="number_documento" required></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="stacked">Fecha de expedición del documento</ion-label>
+        <ion-input name="expedition_date" id="expedition_date" [(ngModel)]="expedition_date" type="date" required></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="stacked">Fecha de nacimiento</ion-label>
+        <ion-input name="date_birth" id="date_birth" [(ngModel)]="date_birth" type="date" required></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">Genero</ion-label>
+        <ion-select name="gener" id="gener" [(ngModel)]="gener" required>
+          <ion-select-option *ngFor="let g of genersTypes" [value]="g.value.id">{{ g.value.name }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+  
+    </ion-list>
+  
+    <ion-list>
+      <ion-list-header>
+        <ion-label class="textDT">Configura tu cuenta</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label position="floating">Correo electrónico</ion-label>
+        <ion-input name="email" id="email" #email type="email" required></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">Confirmar correo electrónico</ion-label>
+        <ion-input name="emailConfirm" id="emailConfirm" (ionChange)="confirmEmail($event)" type="email" [(ngModel)]="emailConfirm" required></ion-input>
+        <ion-img *ngIf="checkState" [src]="check" class="img-check"></ion-img>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">PIN de seguridad</ion-label>
+        <ion-input name="password" id="password" #password type="password" required></ion-input>
+        <ion-icon [name]="eyes" (click)="showPIN()"></ion-icon>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">Confirmar PIN de seguridad</ion-label>
+        <ion-input name="passwordConfirm" id="passwordConfirm" type="password" [(ngModel)]="passwordConfirm" (ionChange)="confirmPin($event)" required></ion-input>
+        <ion-icon [name]="eyesConfirm" (click)="showPINConfirm( )"></ion-icon>
+      </ion-item>
+      <div *ngIf="confirmPIN">
+        <span class="msg-confirmPIN">
+          Este campo no coincide con el PIN
+        </span>
+      </div>
+  
+    </ion-list>
+
+    <ion-button type="submit" [disabled]="formData.invalid" expand="block" color="registrate" shape="round">
+      SIGUIENTE
+    </ion-button>
+
+  </form>
+
+</ion-content>

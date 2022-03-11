@@ -1,0 +1,27 @@
+<app-header status="1" title="NÚMERO CELULAR" ></app-header>
+
+<ion-content>
+
+    <div class="img-oink">
+        <ion-img [src]="image"></ion-img>
+        <h3>Para comenzar, por favor ingresa <strong>tu número celular.</strong></h3>
+    </div>
+
+    <div class="line"></div>
+
+    <form (ngSubmit)="applyForCode( formPhone )" #formPhone="ngForm">
+        
+        <div class="input_phone">
+            <ion-input type="text" name="phone_number" [(ngModel)]="phone_number" placeholder="( xxx - xxxxxx )" required></ion-input>
+        </div>
+
+        <div>
+            <ion-button  type="submit" [disabled]="formPhone.invalid" color="registrate" expand="block" fill="clear" shape="round">
+                <ion-icon slot="icon-only" name="checkmark-outline"></ion-icon>
+            </ion-button>
+        </div>
+
+    </form>
+    
+
+</ion-content>

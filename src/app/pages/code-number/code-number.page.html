@@ -1,0 +1,21 @@
+<app-header status="1" title="NÚMERO CELULAR" ></app-header>
+
+<ion-content>
+
+  
+    <div class="img-oink">
+
+      <ion-img [src]="image"></ion-img>
+      <h3>Digíta el código que recibiste vía <strong>mensaje de texto al</strong>
+        <br>{{ phone }}
+      </h3>
+
+    </div>
+
+    <div class="line"></div>
+        
+    <div class="input_phone">
+        <ion-input type="text" name="codeNumber" id="codeNumber" [(ngModel)]="codeNumber" placeholder=" XXXX " (ionChange)="verifyCode($event)" required></ion-input>
+    </div>
+
+</ion-content>
